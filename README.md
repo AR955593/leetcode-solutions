@@ -33,3 +33,29 @@ Total Problems Solved: **0**
 - Python
 
 ---
+---
+
+## 📌 Topics Covered
+
+- Arrays
+- Strings
+- Hashing
+- Binary Search
+- Recursion
+- Dynamic Programming
+- Trees
+- Graphs
+
+---
+
+## 💡 Goal
+
+Solve **300+ LeetCode problems** and strengthen problem solving skills for technical interviews.
+
+---
+
+## ⭐ If you like this repository
+
+Give it a **Star ⭐** on GitHub.
+
+---
