@@ -50,7 +50,7 @@ Total Problems Solved: **101**
 
 ## 💡 Goal
 
-Solve **300+ LeetCode problems** and strengthen problem solving skills for technical interviews.
+Solve **500+ LeetCode problems** and strengthen problem solving skills for technical interviews.
 
 ---
 
