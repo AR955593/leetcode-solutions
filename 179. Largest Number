@@ -1,1 +1,18 @@
 
+from functools import cmp_to_key
+class Solution:
+    def largestNumber(self, nums: List[int]) -> str:
+        nums = list(map(str ,nums))
+        def com( a,b):
+            if a+b > b+a:
+                return -1
+            elif a+b < b+a:
+                return 1
+            else:
+                return 0
+        nums.sort(key =  cmp_to_key(com))
+        if nums[0] == '0' :
+            return 0        
+        result = ''.join(nums)
+        return result
+                    
