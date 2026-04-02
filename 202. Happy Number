@@ -1,0 +1,15 @@
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        A = set()
+        while n != 1:
+            if n in A:
+                return False 
+            A.add(n)
+            total = 0    
+            while n > 0:
+                dig = n%10
+                total += dig*dig
+                n= n//10
+            n=total
+        return True     
+                    
