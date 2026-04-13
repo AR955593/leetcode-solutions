@@ -1,0 +1,9 @@
+class Solution(object):
+    def getMinDistance(self, nums, target, start):
+        d = float('inf')
+        
+        for i in range(len(nums)):
+            if nums[i] == target:
+                d = min(d, abs(i - start))
+        
+        return d
