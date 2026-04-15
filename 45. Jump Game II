@@ -1,0 +1,11 @@
+class Solution:
+    def jump(self, nums: List[int]) -> int:
+        jump = 0
+        end = 0
+        maxs = 0
+        for i in range(0 , len(nums)-1):
+            maxs = max(maxs, i+nums[i])
+            if i == end:
+                jump+=1
+                end = maxs
+        return jump
