@@ -20,11 +20,11 @@ I actively practice DSA and maintain this repository to track my coding progress
 
 | Difficulty | Problems Solved |
 |------------|----------------|
-| Easy       | 74 |
-| Medium     | 18 |
+| Easy       | 71 |
+| Medium     | 45 |
 | Hard       | 9  |
 
-Total Problems Solved: **101**
+Total Problems Solved: **125**
 
 ---
 
