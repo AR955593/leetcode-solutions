@@ -1,0 +1,25 @@
+class Solution:
+    def minSwaps(self, nums: List[int]) -> int:
+        def digit_sum(x):
+            s = 0
+            while x > 0:
+                s += x % 10
+                x //= 10
+            return s
+        n = len(nums)       
+        arr = [(digit_sum(nums[i]), nums[i], i) for i in range(n)]
+        arr.sort()
+        visit = [False] * n
+        swaps = 0
+        for i in range(n):
+            if visit[i] or arr[i][2] == i:
+                continue
+            size = 0
+            j = i
+            while not visit[j]:
+                visit[j] = True
+                j = arr[j][2]
+                size += 1
+            if size > 1:
+                swaps += size - 1
+        return swaps
