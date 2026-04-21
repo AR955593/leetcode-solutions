@@ -1,0 +1,12 @@
+class Solution:
+    def minMaxGame(self, nums: List[int]) -> int:
+        while len(nums) > 1:
+            arr = []
+            n = len(nums) // 2
+            for i in range(n):
+                if i % 2 == 0:
+                    arr.append(min(nums[2*i], nums[2*i+1]))
+                else:
+                    arr.append(max(nums[2*i], nums[2*i+1]))
+            nums = arr 
+        return nums[0]
