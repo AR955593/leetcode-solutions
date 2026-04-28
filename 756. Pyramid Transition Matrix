@@ -1,0 +1,28 @@
+class Solution:
+    def pyramidTransition(self, bottom: str, allowed: List[str]) -> bool:
+        p = {}
+        for x, y, z in allowed:
+            if x + y in p:
+                p[x + y].add(z)
+            else:
+                p[x + y] = {z}
+
+        q = {bottom}
+        while q:
+            nq = set()
+            while q:
+                line = q.pop()
+                if len(line) == 1:
+                    return True
+                t = {("", line)}
+                while t:
+                    w, r = t.pop()
+                    if len(r) == 1:
+                        nq.add(w)
+                    else:
+                        for c in p.get(r[:2], []):
+                            t.add((w + c, r[1:]))
+            if nq:
+                q = nq
+            else:
+                return False
