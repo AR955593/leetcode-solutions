@@ -1,0 +1,35 @@
+class Solution {
+    static boolean isValidAns(int arr[], int mid , int m){
+        int magcnt =1;
+        int lastp=0;
+        for(int i=1;i<arr.length;i++){
+            if(Math.abs(arr[i]-arr[lastp]) >= mid){
+                magcnt++; 
+                lastp =i;
+                if(magcnt == m){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public int maxDistance(int[] position, int m) {
+        Arrays.sort(position);
+        int n = position.length;
+        int s = 0;
+        int e = position[n-1]-position[0];
+        int ans =-1;
+        while(s<=e){
+            int mid = s+(e-s)/2;
+            if(isValidAns(position, mid , m)){
+                ans =mid;
+                s= mid+1;
+            }
+            else{
+                e = mid-1;
+            }
+        }
+        return ans;
+
+    }
+}
